@@ -15,6 +15,7 @@ const createUser = async ({email,name,mobile,gender})=>{
             mobile:mobile,
             gender:gender,
             deleted:false,
+            companyCode:String,
             active:true
         }
         const insert = await userCollection.create(data)
@@ -22,6 +23,5 @@ const createUser = async ({email,name,mobile,gender})=>{
         return insert
     }
 }
-
 export default createUser
 

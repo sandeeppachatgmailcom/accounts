@@ -6,8 +6,8 @@ const userSchema = new mongoose.Schema({
     mobile:{type:String,required:true,unique:true },
     gender:{type:String},
     deleted:{type:Boolean,required:true,default:false},
-    active:{type:Boolean,required:true,default:true}
-
+    active:{type:Boolean,required:true,default:true},
+    companyCode:{type:String},
 })
 
 const userCollection = mongoose.model('user',userSchema)
